@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Non-Destructive Testing Services | Inspax</title>
+<meta name="description" content="Explore Inspax industrial Non-Destructive Testing services, including conventional NDT, PAUT, TOFD, ultrasonic testing, radiography and pipeline integrity inspection.">
+
+<style>
+/* =========================
+   INSPAX NDT PAGE
+========================= */
+
+#inspax-ndt {
+    font-family: Arial, sans-serif;
+    color: #263445;
+    line-height: 1.7;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+#inspax-ndt * {
+    box-sizing: border-box;
+}
+
+#inspax-ndt .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#inspax-ndt h1,
+#inspax-ndt h2,
+#inspax-ndt h3,
+#inspax-ndt p {
+    margin-top: 0;
+}
+
+#inspax-ndt .tag {
+    color: #e99b25;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#inspax-ndt .section-heading {
+    font-size: 34px;
+    line-height: 1.3;
+    color: #12304d;
+    margin: 12px 0 18px;
+}
+
+#inspax-ndt .section-description {
+    color: #657181;
+    font-size: 16px;
+    max-width: 850px;
+}
+
+/* HERO */
+
+#inspax-ndt .hero {
+    background:
+    linear-gradient(90deg,
+    rgba(5,24,45,.94),
+    rgba(5,24,45,.65)),
+    url("https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQecQGnGVBXSWomCLPmFYuTuwY5dYoSXbXONJt5BFHUy4_Pun5mhJilDOsMS63C6ISv_QCcfRWi7VmMrIi-ssFQK8zPzF-K09kHjGqOBPLl8ZmVHz5-ekKSM2TKWHZBX2eJ3gOhNthbXMD51NI3JFve-AhLqdLpEpMbuoZTn-1Feg8YuA_K-6fbkIXOneINMl8gY4tOOSocsQwqknGK6MkH2BveuOQcChXvLta9wffE=w1280");
+
+    background-size: cover;
+    background-position: center;
+    padding: 115px 0;
+    color: white;
+}
+
+#inspax-ndt .hero-content {
+    max-width: 760px;
+}
+
+#inspax-ndt .hero h1 {
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.15;
+    margin: 18px 0;
+    color: white;
+}
+
+#inspax-ndt .hero p {
+    color: #e2eaf1;
+    font-size: 18px;
+    max-width: 680px;
+    margin-bottom: 28px;
+}
+
+#inspax-ndt .hero-btn {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #f2a12c;
+    color: #102c45;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#inspax-ndt .hero-btn:hover {
+    background: white;
+}
+
+/* INTRO */
+
+#inspax-ndt .intro {
+    padding: 75px 0;
+}
+
+#inspax-ndt .intro-content {
+    max-width: 950px;
+}
+
+/* CONVENTIONAL SERVICES */
+
+#inspax-ndt .conventional {
+    padding: 75px 0;
+    background: white;
+}
+
+#inspax-ndt .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+#inspax-ndt .content-image img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+#inspax-ndt .content-text h2 {
+    font-size: 30px;
+    color: #12304d;
+    margin: 12px 0 22px;
+}
+
+#inspax-ndt .service-list {
+    list-style: none;
+    padding: 0;
+}
+
+#inspax-ndt .service-list li {
+    margin-bottom: 19px;
+    padding-left: 18px;
+    border-left: 3px solid #f2a12c;
+    color: #596575;
+}
+
+#inspax-ndt .service-list strong {
+    display: block;
+    color: #183b5a;
+    margin-bottom: 4px;
+}
+
+/* ADVANCED SERVICES */
+
+#inspax-ndt .advanced {
+    padding: 80px 0;
+    background: #eef3f8;
+}
+
+#inspax-ndt .advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+#inspax-ndt .service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 3px solid #e9a13a;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+#inspax-ndt .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.10);
+}
+
+#inspax-ndt .service-number {
+    display: inline-block;
+    color: #e99b25;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+#inspax-ndt .service-card h3 {
+    font-size: 20px;
+    color: #153957;
+    margin-bottom: 12px;
+}
+
+#inspax-ndt .service-card p {
+    color: #657181;
+    margin-bottom: 0;
+}
+
+/* WHY NDT */
+
+#inspax-ndt .benefits {
+    padding: 75px 0;
+    background: white;
+}
+
+#inspax-ndt .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+#inspax-ndt .benefit {
+    padding: 25px;
+    background: #f7f9fc;
+    border-radius: 9px;
+    border-left: 3px solid #f2a12c;
+}
+
+#inspax-ndt .benefit h3 {
+    color: #153957;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+#inspax-ndt .benefit p {
+    color: #657181;
+    margin-bottom: 0;
+}
+
+/* CTA */
+
+#inspax-ndt .cta {
+    padding: 75px 20px;
+    background: #12304d;
+    color: white;
+    text-align: center;
+}
+
+#inspax-ndt .cta h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#inspax-ndt .cta p {
+    color: #dce5ed;
+    margin-bottom: 25px;
+}
+
+#inspax-ndt .cta a {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #f2a12c;
+    color: #102c45;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#inspax-ndt .cta a:hover {
+    background: white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    #inspax-ndt .hero {
+        padding: 80px 0;
+    }
+
+    #inspax-ndt .hero p {
+        font-size: 16px;
+    }
+
+    #inspax-ndt .section-heading {
+        font-size: 28px;
+    }
+
+    #inspax-ndt .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #inspax-ndt .content-image img {
+        height: 280px;
+    }
+
+    #inspax-ndt .advanced-grid,
+    #inspax-ndt .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #inspax-ndt .cta h2 {
+        font-size: 26px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inspax-ndt">
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+<div class="container hero-content">
+
+<span class="tag">Inspection & Certification</span>
+
+<h1>Non-Destructive Testing Services</h1>
+
+<p>
+Advanced industrial Non-Destructive Testing solutions
+to detect material defects, weld discontinuities and
+corrosion without damaging industrial assets.
+</p>
+
+<a href="/contact-us/" class="hero-btn">
+Request an Inspection
+</a>
+
+</div>
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+<div class="container intro-content">
+
+<span class="tag">Our Expertise</span>
+
+<h2 class="section-heading">
+Industrial Non-Destructive Testing (NDT) Services
+</h2>
+
+<p class="section-description">
+Our Non-Destructive Testing methodologies provide
+advanced surface and volumetric inspection techniques
+to identify subsurface flaws, material discontinuities
+and weld defects without causing damage to industrial
+components or disrupting asset integrity.
+</p>
+
+</div>
+</section>
+
+
+<!-- CONVENTIONAL NDT -->
+
+<section class="conventional">
+<div class="container content-grid">
+
+<div class="content-image">
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQecQGnGVBXSWomCLPmFYuTuwY5dYoSXbXONJt5BFHUy4_Pun5mhJilDOsMS63C6ISv_QCcfRWi7VmMrIi-ssFQK8zPzF-K09kHjGqOBPLl8ZmVHz5-ekKSM2TKWHZBX2eJ3gOhNthbXMD51NI3JFve-AhLqdLpEpMbuoZTn-1Feg8YuA_K-6fbkIXOneINMl8gY4tOOSocsQwqknGK6MkH2BveuOQcChXvLta9wffE=w1280"
+alt="Industrial non-destructive testing inspection">
+</div>
+
+<div class="content-text">
+
+<span class="tag">Standard Inspection</span>
+
+<h2>Conventional NDT Services</h2>
+
+<ul class="service-list">
+
+<li>
+<strong>Visual Testing (VT) & Remote Visual Inspection (RVI)</strong>
+High-resolution drone technology and advanced optical
+instruments for detailed asset monitoring and inspection.
+</li>
+
+<li>
+<strong>Surface & Flaw Detection</strong>
+Dye Penetrant Testing (DPT) and Magnetic Particle
+Inspection (MPI) to identify surface-breaking defects.
+</li>
+
+<li>
+<strong>Ultrasonic Inspections</strong>
+Ultrasonic Flaw Detection and Ultrasonic Thickness
+Gauging (UTG) to evaluate internal defects, wall thinning
+and corrosion.
+</li>
+
+<li>
+<strong>Radiography Testing (RT)</strong>
+Conventional and Digital Radiography Examination
+for internal volumetric inspection of welds and materials.
+</li>
+
+</ul>
+
+</div>
+</div>
+</section>
+
+
+<!-- ADVANCED NDT -->
+
+<section class="advanced">
+<div class="container">
+
+<span class="tag">Advanced Inspection Technology</span>
+
+<h2 class="section-heading">Advanced NDT Services</h2>
+
+<p class="section-description">
+We provide advanced inspection technologies designed
+for critical industrial assets, high-integrity welds
+and comprehensive pipeline condition assessment.
+</p>
+
+<div class="advanced-grid">
+
+<div class="service-card">
+<span class="service-number">01 / ADVANCED ULTRASONICS</span>
+<h3>Phased Array Ultrasonic Testing (PAUT) & TOFD</h3>
+<p>
+High-precision weld scanning using Phased Array
+Ultrasonic Testing and Time of Flight Diffraction
+for advanced defect detection, characterization
+and sizing.
+</p>
+</div>
+
+<div class="service-card">
+<span class="service-number">02 / ELECTROMAGNETIC</span>
+<h3>Electromagnetic Testing</h3>
+<p>
+Specialized Eddy Current Testing (ECT) and Pulse
+Eddy Current Testing (PECT) to detect material
+discontinuities and assess corrosion through
+protective coatings.
+</p>
+</div>
+
+<div class="service-card">
+<span class="service-number">03 / PIPELINE INSPECTION</span>
+<h3>Pipeline Integrity Management</h3>
+<p>
+Magnetic Flux Leakage (MFL), Long Range Ultrasonic
+Testing (LRUT) and Electronic Geometry Pigging
+for comprehensive pipeline condition assessment.
+</p>
+</div>
+
+<div class="service-card">
+<span class="service-number">04 / WELD INSPECTION</span>
+<h3>Advanced Weld Inspection</h3>
+<p>
+Advanced inspection techniques for identifying,
+evaluating and characterizing critical weld defects
+and material discontinuities.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- WHY NDT -->
+
+<section class="benefits">
+<div class="container">
+
+<span class="tag">Our Approach</span>
+
+<h2 class="section-heading">
+Why Non-Destructive Testing Matters
+</h2>
+
+<p class="section-description">
+Reliable inspection plays an important role in
+maintaining industrial asset integrity, operational
+safety and long-term equipment performance.
+</p>
+
+<div class="benefit-grid">
+
+<div class="benefit">
+<h3>Asset Integrity</h3>
+<p>
+Identify material defects, corrosion and weld
+discontinuities while preserving the inspected asset.
+</p>
+</div>
+
+<div class="benefit">
+<h3>Operational Safety</h3>
+<p>
+Support safer industrial operations through
+systematic inspection and defect evaluation.
+</p>
+</div>
+
+<div class="benefit">
+<h3>Reliable Assessment</h3>
+<p>
+Use suitable conventional and advanced inspection
+techniques to support informed maintenance decisions.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT CTA -->
+
+<section class="cta">
+<div class="container">
+
+<h2>Need Professional NDT Inspection Services?</h2>
+
+<p>
+Connect with Inspax for industrial inspection,
+testing and certification solutions.
+</p>
+
+<a href="/contact-us/">Contact Our Team</a>
+
+</div>
+</section>
+
+</div>
+
+</body>
+</html>

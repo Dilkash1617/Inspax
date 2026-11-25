@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Third-Party Inspection & BGAS/NACE Audits | Inspax</title>
+
+<meta name="description" content="Inspax provides independent Third-Party Inspection, mechanical equipment quality surveillance, BGAS/NACE coating audits and infrastructure QA/QC services.">
+
+<style>
+
+/* ==================================
+   INSPAX TPI PAGE - ISOLATED CSS
+================================== */
+
+#inspax-tpi {
+    font-family: Arial, sans-serif;
+    color: #263445;
+    line-height: 1.7;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+#inspax-tpi * {
+    box-sizing: border-box;
+}
+
+#inspax-tpi .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#inspax-tpi h1,
+#inspax-tpi h2,
+#inspax-tpi h3 {
+    margin-top: 0;
+}
+
+#inspax-tpi .tag {
+    display: inline-block;
+    color: #e99b25;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#inspax-tpi .section-heading {
+    font-size: 34px;
+    line-height: 1.3;
+    color: #12304d;
+    margin: 12px 0 18px;
+}
+
+#inspax-tpi .section-description {
+    color: #657181;
+    font-size: 16px;
+    max-width: 900px;
+}
+
+/* HERO SECTION */
+
+#inspax-tpi .hero {
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,24,45,.94),
+        rgba(5,24,45,.60)
+    ),
+    url("https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfBbnOPJq3UqSnpvd9UAU3UXE2Qcsupw9-ghzlmiS8zW248EPllTNsY8shQYI4ZLFmv-iJ87Di25FL5DsmuSTT56LUyS7JgR0jriOfs4yYqsnqcVMC_zmejZPKoy-RI03Om8xjD8xarfaEoK1Pq2haHavPMFNZX89NqfEnmV46B0NC4IDXaJRYfs3BBPZ1sHzYx-KVBu55VHYN3BBi7BwxCRVq72vGrEJtnogsC=w1280");
+
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: white;
+}
+
+#inspax-tpi .hero-content {
+    max-width: 850px;
+}
+
+#inspax-tpi .hero h1 {
+    font-size: clamp(34px, 5vw, 53px);
+    line-height: 1.16;
+    color: white;
+    margin: 18px 0;
+}
+
+#inspax-tpi .hero p {
+    font-size: 18px;
+    color: #e4eaf0;
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+#inspax-tpi .primary-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f2a12c;
+    color: #102c45;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#inspax-tpi .primary-btn:hover {
+    background: white;
+}
+
+/* INTRODUCTION */
+
+#inspax-tpi .intro {
+    padding: 75px 0;
+}
+
+#inspax-tpi .intro-content {
+    max-width: 1000px;
+}
+
+/* SERVICE SECTIONS */
+
+#inspax-tpi .service-section {
+    padding: 75px 0;
+    background: white;
+}
+
+#inspax-tpi .service-section.alt {
+    background: #f7f9fc;
+}
+
+#inspax-tpi .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+#inspax-tpi .content-grid.reverse .content-image {
+    order: 2;
+}
+
+#inspax-tpi .content-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+#inspax-tpi .content-text h2 {
+    font-size: 29px;
+    line-height: 1.3;
+    color: #12304d;
+    margin: 12px 0 22px;
+}
+
+/* SERVICE LIST */
+
+#inspax-tpi .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#inspax-tpi .service-list li {
+    margin-bottom: 19px;
+    padding-left: 18px;
+    border-left: 3px solid #f2a12c;
+    color: #596575;
+}
+
+#inspax-tpi .service-list strong {
+    display: block;
+    color: #183b5a;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* INFRASTRUCTURE SECTION */
+
+#inspax-tpi .infrastructure {
+    padding: 80px 0;
+    background: #eef3f8;
+}
+
+#inspax-tpi .infrastructure-list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+#inspax-tpi .infrastructure-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border-bottom: 3px solid #e9a13a;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+#inspax-tpi .infrastructure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.09);
+}
+
+#inspax-tpi .card-number {
+    color: #e99b25;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#inspax-tpi .infrastructure-card h3 {
+    font-size: 19px;
+    color: #153957;
+    margin-bottom: 10px;
+}
+
+#inspax-tpi .infrastructure-card p {
+    color: #657181;
+    margin-bottom: 0;
+}
+
+/* WHY INSPAX */
+
+#inspax-tpi .why-inspax {
+    padding: 80px 0;
+    background: white;
+}
+
+#inspax-tpi .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+#inspax-tpi .why-card {
+    padding: 27px;
+    background: #f7f9fc;
+    border-radius: 9px;
+    border-left: 3px solid #f2a12c;
+}
+
+#inspax-tpi .why-card h3 {
+    color: #153957;
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+#inspax-tpi .why-card p {
+    color: #657181;
+    margin-bottom: 0;
+}
+
+/* CONTACT SECTION */
+
+#inspax-tpi .cta {
+    padding: 75px 20px;
+    background: #12304d;
+    text-align: center;
+    color: white;
+}
+
+#inspax-tpi .cta h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#inspax-tpi .cta p {
+    color: #dce5ed;
+    margin-bottom: 25px;
+}
+
+#inspax-tpi .cta .primary-btn {
+    margin-top: 5px;
+}
+
+#inspax-tpi .contact-details {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+#inspax-tpi .contact-item h3 {
+    color: #f2a12c;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#inspax-tpi .contact-item p,
+#inspax-tpi .contact-item a {
+    color: #e4eaf0;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px) {
+
+    #inspax-tpi .hero {
+        padding: 80px 0;
+    }
+
+    #inspax-tpi .hero h1 {
+        font-size: 35px;
+    }
+
+    #inspax-tpi .hero p {
+        font-size: 16px;
+    }
+
+    #inspax-tpi .section-heading {
+        font-size: 28px;
+    }
+
+    #inspax-tpi .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #inspax-tpi .content-grid.reverse .content-image {
+        order: 0;
+    }
+
+    #inspax-tpi .content-image img {
+        height: 280px;
+    }
+
+    #inspax-tpi .infrastructure-list,
+    #inspax-tpi .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #inspax-tpi .contact-details {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #inspax-tpi .cta h2 {
+        font-size: 26px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inspax-tpi">
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+<div class="container hero-content">
+
+<span class="tag">Inspection & Certification</span>
+
+<h1>Third-Party Inspection (TPI) & BGAS/NACE Audits</h1>
+
+<p>
+Independent, unbiased TPI engineering audits across
+the manufacturing, construction, and oil & gas sectors.
+Our inspection specialists provide rigorous vendor
+surveillance, structural coating evaluations, and
+NACE/BGAS-compliant corrosion inspections to support
+asset integrity and reduce operational risks.
+</p>
+
+<a href="/contact-us/" class="primary-btn">
+Request Inspection Services
+</a>
+
+</div>
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+<div class="container intro-content">
+
+<span class="tag">Our Expertise</span>
+
+<h2 class="section-heading">
+Independent Third-Party Inspection & Technical Audits
+</h2>
+
+<p class="section-description">
+Inspax provides independent inspection and quality
+surveillance services throughout the manufacturing,
+fabrication, construction and industrial supply chain.
+Our technical approach focuses on verifying compliance
+with applicable engineering specifications, international
+standards and project quality requirements.
+
+From mechanical equipment and static assets to protective
+coatings and heavy infrastructure, our inspection services
+help identify non-conformities, strengthen quality assurance
+and support reliable project execution.
+</p>
+
+</div>
+</section>
+
+
+<!-- MECHANICAL EQUIPMENT -->
+
+<section class="service-section">
+
+<div class="container content-grid">
+
+<div class="content-image">
+
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfBbnOPJq3UqSnpvd9UAU3UXE2Qcsupw9-ghzlmiS8zW248EPllTNsY8shQYI4ZLFmv-iJ87Di25FL5DsmuSTT56LUyS7JgR0jriOfs4yYqsnqcVMC_zmejZPKoy-RI03Om8xjD8xarfaEoK1Pq2haHavPMFNZX89NqfEnmV46B0NC4IDXaJRYfs3BBPZ1sHzYx-KVBu55VHYN3BBi7BwxCRVq72vGrEJtnogsC=w1280"
+alt="Mechanical and static equipment quality surveillance on an industrial skid package">
+
+</div>
+
+<div class="content-text">
+
+<span class="tag">Mechanical Inspection</span>
+
+<h2>Mechanical & Static Equipment Quality Surveillance</h2>
+
+<p class="section-description">
+We deliver rigorous, objective technical surveillance
+throughout the fabrication, assembly and deployment
+phases of critical static assets.
+</p>
+
+<ul class="service-list">
+
+<li>
+<strong>Line Pipes & Cross-Country Pipeline Components</strong>
+Mill inspections, longitudinal weld profiling,
+dimensional verification and geometric compliance.
+</li>
+
+<li>
+<strong>Storage Tanks & Pressure Vessels</strong>
+Structural integrity verification against applicable
+ASME Section VIII and API requirements during fabrication.
+</li>
+
+<li>
+<strong>Skid Packages & Modular Assemblies</strong>
+Structural alignment, bolting verification and
+piping manifold validation.
+</li>
+
+<li>
+<strong>Process Equipment Assurance</strong>
+Technical inspection of heavy columns, boilers,
+refinery units and other process equipment
+prior to site delivery.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- COATING AUDITS -->
+
+<section class="service-section alt">
+
+<div class="container content-grid reverse">
+
+<div class="content-image">
+
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfJvYt5YDNQGeDLk1lbXyYGQEof8_qsWdYhNub5kxjLweYiFu3yfJu-VvV4QD7Y__P8H6dVH4JzKcOx_5Vb_4HpXflkuat2gkkt-6RrZC5eP-B_ASMkD54w0bspJCq0v5vgYK4Z85tnyTUqd08CbGEV_MiAgBv2BD7q0nT-g40DLjeXOVlZnKH2u_F4YvHIW_mvRmxEwxr7jsB75ic__MZiwWpm4ofei8dtWbsM22Q=w1280"
+alt="Pipeline protective coating inspection and corrosion audit">
+
+</div>
+
+<div class="content-text">
+
+<span class="tag">Coating & Corrosion Inspection</span>
+
+<h2>Protective Coatings & NACE / BGAS Corrosion Audits</h2>
+
+<p class="section-description">
+Independent field and factory evaluations designed
+to prevent premature coating failures, monitor application
+quality and reduce environmental degradation.
+</p>
+
+<ul class="service-list">
+
+<li>
+<strong>Surface Preparation Audits</strong>
+Quantitative assessment of substrate cleanliness,
+surface profile, anchor patterns and soluble salt
+contamination before coating application.
+</li>
+
+<li>
+<strong>Coating Application Surveillance</strong>
+Monitoring of Dry Film Thickness (DFT), Wet Film
+Thickness (WFT), environmental conditions and
+inter-coat curing requirements.
+</li>
+
+<li>
+<strong>Advanced Holiday Detection</strong>
+High-voltage and low-voltage spark testing to identify
+pinholes, voids and discontinuities in protective
+coatings and linings.
+</li>
+
+<li>
+<strong>Asset Degradation Mapping</strong>
+Systematic assessment of existing infrastructure
+to classify corrosion severity and recommend
+appropriate technical rehabilitation pathways.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- INFRASTRUCTURE QA QC -->
+
+<section class="infrastructure">
+
+<div class="container">
+
+<span class="tag">Civil & Structural Inspection</span>
+
+<h2 class="section-heading">
+Heavy Infrastructure & Structural Supply Chain QA/QC
+</h2>
+
+<p class="section-description">
+Independent engineering validation across the civil
+and structural supply chain to identify substandard
+material fabrication and ensure compliance before
+materials and components reach the construction site.
+</p>
+
+<div class="infrastructure-list">
+
+<div class="infrastructure-card">
+
+<div class="card-number">01 / STRUCTURAL STEEL</div>
+
+<h3>Structural Steel Fabrication Audits</h3>
+
+<p>
+Technical oversight at casting yards and fabrication
+shops, including monitoring of Welding Procedure
+Specifications (WPS), welding activities and
+structural dimensional verification.
+</p>
+
+</div>
+
+
+<div class="infrastructure-card">
+
+<div class="card-number">02 / CONCRETE ELEMENTS</div>
+
+<h3>Precast & Prestressed Concrete Element Audits</h3>
+
+<p>
+Dimensional control, tendon tensioning surveillance
+and curing log verification for high-load
+infrastructure components.
+</p>
+
+</div>
+
+
+<div class="infrastructure-card">
+
+<div class="card-number">03 / MATERIAL VERIFICATION</div>
+
+<h3>Vendor Material Traceability Audits</h3>
+
+<p>
+Technical verification and traceability of Material
+Test Reports (MTRs), mill certificates and heat
+numbers to identify potential material non-compliance.
+</p>
+
+</div>
+
+
+<div class="infrastructure-card">
+
+<div class="card-number">04 / QUALITY ASSURANCE</div>
+
+<h3>Supply Chain Quality Surveillance</h3>
+
+<p>
+Independent quality monitoring of fabrication,
+material procurement and manufacturing activities
+to support project specifications and quality plans.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- WHY PARTNER WITH INSPAX -->
+
+<section class="why-inspax">
+
+<div class="container">
+
+<span class="tag">Why Choose Inspax</span>
+
+<h2 class="section-heading">
+Why Partner with Inspax for Technical Governance?
+</h2>
+
+<p class="section-description">
+Our inspection philosophy combines technical expertise,
+independent evaluation and international engineering
+standards to support quality, safety and asset reliability.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<h3>Certified Engineering Personnel</h3>
+
+<p>
+Inspection activities are undertaken by appropriately
+qualified and experienced personnel, with relevant
+NACE/AMPP, BGAS-CSWIP and senior AWS/CSWIP
+qualifications as applicable to the assignment.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>Unbiased Field Evidence</h3>
+
+<p>
+Detailed inspection observations, technical reports
+and data-driven Non-Conformance Reports (NCRs)
+to support transparent quality assessment and
+commercial accountability.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>Risk-First Liability Mitigation</h3>
+
+<p>
+Our inspection protocols focus on identifying
+potential structural and manufacturing vulnerabilities
+early in the supply chain, helping reduce the risk
+of installation failures and unplanned downtime.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>Global Code Alignment</h3>
+
+<p>
+Inspection and quality surveillance aligned with
+applicable international engineering frameworks,
+including ASTM, ASME, API, ISO and BS EN standards.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="cta">
+
+<div class="container">
+
+<span class="tag">Get In Touch</span>
+
+<h2>Need Independent Inspection & Technical Audit Services?</h2>
+
+<p>
+Connect with Inspax for Third-Party Inspection,
+mechanical surveillance, coating audits and
+industrial quality assurance solutions.
+</p>
+
+<a href="/contact-us/" class="primary-btn">
+Contact Our Team
+</a>
+
+
+<!-- CONTACT DETAILS -->
+
+<div class="contact-details">
+
+<div class="contact-item">
+
+<h3>Registered Address</h3>
+
+<p>
+Sadbhawna Colony, Johri Gaon,<br>
+Dehradun - 240003,<br>
+Uttarakhand, India
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>Phone</h3>
+
+<p>
+<a href="tel:+919068298693">+91 9068298693</a><br>
+<a href="tel:+919560065131">+91 9560065131</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>Email</h3>
+
+<p>
+<a href="mailto:info@inspax.in">
+info@inspax.in
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+</body>
+</html>

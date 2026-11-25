@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plant Risk Assessment & Structural Audits | Inspax</title>
+
+<meta name="description" content="Inspax provides industrial plant risk assessment, structural stability audits, foundation integrity inspections, safety barrier mapping and mechanical stress integrity assessments.">
+
+<style>
+
+/* =====================================
+   INSPAX PLANT RISK PAGE
+   ISOLATED RESPONSIVE CSS
+===================================== */
+
+#inspax-risk {
+    font-family: Arial, sans-serif;
+    color: #263445;
+    line-height: 1.7;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+#inspax-risk * {
+    box-sizing: border-box;
+}
+
+#inspax-risk .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#inspax-risk h1,
+#inspax-risk h2,
+#inspax-risk h3 {
+    margin-top: 0;
+}
+
+#inspax-risk .tag {
+    display: inline-block;
+    color: #e99b25;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#inspax-risk .section-heading {
+    font-size: 34px;
+    line-height: 1.3;
+    color: #12304d;
+    margin: 12px 0 18px;
+}
+
+#inspax-risk .section-description {
+    color: #657181;
+    font-size: 16px;
+    max-width: 900px;
+}
+
+/* HERO SECTION */
+
+#inspax-risk .hero {
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,24,45,.94),
+        rgba(5,24,45,.60)
+    ),
+    url("https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQd76fd-CSL8jVEOpKAojkpIhaduIcFcldQANgFDf6dMWU-VnrhrLvOjyZDBeV8kgqsCv7xFrfsOe38rdbsVkdYsCzggkJ7HbSb8OIrsbS3zD0H0c733TDT2_upLE69LR0zQ1fVyqyt0V-MrVGc4TITPAU1S0av1TI6dwhYdbLRn2xnV5aH1M6zvWVccn_t35thXTok8vcso1xPchZD92r-Mdn2pmyNfVV-0-LU4wTE=w1280");
+
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: white;
+}
+
+#inspax-risk .hero-content {
+    max-width: 850px;
+}
+
+#inspax-risk .hero h1 {
+    color: white;
+    font-size: clamp(35px, 5vw, 54px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+#inspax-risk .hero p {
+    color: #e4eaf0;
+    font-size: 18px;
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+#inspax-risk .primary-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f2a12c;
+    color: #102c45;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#inspax-risk .primary-btn:hover {
+    background: white;
+}
+
+/* INTRODUCTION */
+
+#inspax-risk .intro {
+    padding: 75px 0;
+}
+
+#inspax-risk .intro-content {
+    max-width: 1000px;
+}
+
+/* SERVICE SECTIONS */
+
+#inspax-risk .service-section {
+    padding: 75px 0;
+    background: white;
+}
+
+#inspax-risk .service-section.alt {
+    background: #f7f9fc;
+}
+
+#inspax-risk .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+#inspax-risk .content-grid.reverse .content-image {
+    order: 2;
+}
+
+#inspax-risk .content-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+#inspax-risk .content-text h2 {
+    font-size: 29px;
+    line-height: 1.3;
+    color: #12304d;
+    margin: 12px 0 22px;
+}
+
+/* SERVICE LIST */
+
+#inspax-risk .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#inspax-risk .service-list li {
+    margin-bottom: 19px;
+    padding-left: 18px;
+    border-left: 3px solid #f2a12c;
+    color: #596575;
+}
+
+#inspax-risk .service-list strong {
+    display: block;
+    color: #183b5a;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* WHY INSPAX */
+
+#inspax-risk .why-section {
+    padding: 80px 0;
+    background: #eef3f8;
+}
+
+#inspax-risk .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+#inspax-risk .why-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border-bottom: 3px solid #e9a13a;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+#inspax-risk .why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.09);
+}
+
+#inspax-risk .why-number {
+    color: #e99b25;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#inspax-risk .why-card h3 {
+    font-size: 19px;
+    color: #153957;
+    margin-bottom: 10px;
+}
+
+#inspax-risk .why-card p {
+    color: #657181;
+    margin-bottom: 0;
+}
+
+/* TECHNICAL STANDARDS */
+
+#inspax-risk .standards {
+    padding: 65px 0;
+    background: white;
+    text-align: center;
+}
+
+#inspax-risk .standards-box {
+    background: #f7f9fc;
+    border-radius: 10px;
+    padding: 35px 25px;
+    margin-top: 25px;
+}
+
+#inspax-risk .standards-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+#inspax-risk .standard-item {
+    padding: 11px 22px;
+    border: 1px solid #e1e7ed;
+    border-radius: 5px;
+    color: #153957;
+    background: white;
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+#inspax-risk .cta {
+    padding: 75px 20px;
+    background: #12304d;
+    text-align: center;
+    color: white;
+}
+
+#inspax-risk .cta h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#inspax-risk .cta p {
+    color: #dce5ed;
+    margin-bottom: 25px;
+}
+
+#inspax-risk .contact-details {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+#inspax-risk .contact-item h3 {
+    color: #f2a12c;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#inspax-risk .contact-item p,
+#inspax-risk .contact-item a {
+    color: #e4eaf0;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px) {
+
+    #inspax-risk .hero {
+        padding: 80px 0;
+    }
+
+    #inspax-risk .hero h1 {
+        font-size: 35px;
+    }
+
+    #inspax-risk .hero p {
+        font-size: 16px;
+    }
+
+    #inspax-risk .section-heading {
+        font-size: 28px;
+    }
+
+    #inspax-risk .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #inspax-risk .content-grid.reverse .content-image {
+        order: 0;
+    }
+
+    #inspax-risk .content-image img {
+        height: 280px;
+    }
+
+    #inspax-risk .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #inspax-risk .contact-details {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #inspax-risk .cta h2 {
+        font-size: 26px;
+    }
+
+    #inspax-risk .standards-box {
+        padding: 25px 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inspax-risk">
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<span class="tag">Industrial Safety & Engineering Assessment</span>
+
+<h1>Plant Risk Assessment & Structural Audits</h1>
+
+<p>
+In-depth engineering evaluations meticulously designed
+to mitigate operational risks, minimize costly industrial
+downtime and improve facility safety. Our comprehensive
+approach includes structural stability audits, technical
+asset risk profiling and physical safety barrier mapping
+to protect critical industrial assets.
+</p>
+
+<a href="/contact-us/" class="primary-btn">
+Request an Engineering Assessment
+</a>
+
+</div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+<div class="container intro-content">
+
+<span class="tag">Our Expertise</span>
+
+<h2 class="section-heading">
+Industrial Plant Risk Assessment & Structural Integrity Evaluation
+</h2>
+
+<p class="section-description">
+Industrial facilities operate with complex structural
+systems, heavy equipment and interconnected process
+infrastructure. Identifying potential vulnerabilities
+before they develop into serious operational issues
+is essential for maintaining safe and reliable operations.
+
+Inspax provides engineering-focused plant risk assessments
+and structural audits to evaluate the physical condition
+of critical assets, identify structural deficiencies
+and support informed maintenance and rehabilitation
+decisions.
+
+Our assessment methodology focuses on structural
+performance, foundation integrity, mechanical stresses
+and industrial safety barriers.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- STRUCTURAL STABILITY -->
+
+<section class="service-section">
+
+<div class="container content-grid">
+
+<div class="content-image">
+
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQd76fd-CSL8jVEOpKAojkpIhaduIcFcldQANgFDf6dMWU-VnrhrLvOjyZDBeV8kgqsCv7xFrfsOe38rdbsVkdYsCzggkJ7HbSb8OIrsbS3zD0H0c733TDT2_upLE69LR0zQ1fVyqyt0V-MrVGc4TITPAU1S0av1TI6dwhYdbLRn2xnV5aH1M6zvWVccn_t35thXTok8vcso1xPchZD92r-Mdn2pmyNfVV-0-LU4wTE=w1280"
+alt="Engineering inspectors evaluating an industrial steel structure and foundations">
+
+</div>
+
+<div class="content-text">
+
+<span class="tag">Structural Engineering</span>
+
+<h2>Structural Stability & Foundations Integrity Audits</h2>
+
+<p class="section-description">
+Rigorous engineering examinations of primary
+load-bearing frameworks to identify structural
+degradation and evaluate the condition and
+performance of critical foundations.
+</p>
+
+<ul class="service-list">
+
+<li>
+<strong>Load-Bearing Infrastructure Diagnostics</strong>
+Structural integrity mapping of heavy industrial
+steel frames, crane gantry girders and reinforced
+concrete columns.
+</li>
+
+<li>
+<strong>Concrete Degradation & Corrosion Mapping</strong>
+Assessment of carbonation depth, chloride ingress
+and reinforcement corrosion across high-exposure
+industrial foundations.
+</li>
+
+<li>
+<strong>Structural Fatigue & Settlement Analysis</strong>
+Monitoring and assessment of differential foundation
+settlement, structural deflection and dynamic
+vibration-related fatigue under operational loads.
+</li>
+
+<li>
+<strong>Seismic & Wind Load Compliance</strong>
+Evaluation of existing structural elements against
+applicable structural engineering codes to identify
+potential strengthening and reinforcement requirements.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANT RISK PROFILING -->
+
+<section class="service-section alt">
+
+<div class="container content-grid reverse">
+
+<div class="content-image">
+
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQepkAkdd_v3oy9AmPpX_y2lSyT_bhgSWxNX6Y82Dh5wtKudJabZX7g_dxIPVh2dnX7sc5-XX7jQVVkgSEvE7Mltu-9FWNEGuFAssuGRBe73OeALdWZCqIcrocyZOrfAVf16GyaACaosJ8Hhy8v5sJl4RMOZHbX-MX1gSQtO_xXZXzJSFkgyYSCAhZ_IXMi7xT1Vwaa50OdqVmAKG6LdKjf6YAPdvoltMZ9ckbXA=w1280"
+alt="Industrial engineer inspecting machinery for plant risk profiling">
+
+</div>
+
+<div class="content-text">
+
+<span class="tag">Industrial Risk Assessment</span>
+
+<h2>Industrial Plant Risk Profiling & Safety Barrier Mapping</h2>
+
+<p class="section-description">
+Objective, engineering-driven technical risk evaluations
+designed to identify structural hazards, assess
+operational vulnerabilities and evaluate the effectiveness
+of physical protection systems.
+</p>
+
+<ul class="service-list">
+
+<li>
+<strong>Physical Safety Barrier Mapping</strong>
+Spatial analysis and evaluation of structural
+containment zones, blast walls, high-pressure
+relief barriers and hazard isolation zones.
+</li>
+
+<li>
+<strong>Asset Risk Profiling</strong>
+Consequence-driven technical assessment of critical
+structural components to classify failure risks
+and support inspection prioritization.
+</li>
+
+<li>
+<strong>Operational Boundary Audits</strong>
+Engineering calculations and verification of
+industrial plant configurations against applicable
+original design limits and operating envelopes.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MECHANICAL STRESS INTEGRITY -->
+
+<section class="service-section">
+
+<div class="container content-grid">
+
+<div class="content-image">
+
+<img
+src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQeeVVJwJXmtmX5SeTpU12KNq-s_QbVvvj6y11Bubie5JztkQIQe5bQLWPVEM0Mo5kACeXB2_A7X5hdgtsLjIBJPE9K_dYBWD0a0H1RQdKm7DU89MIiGa5tYUjFOfIAtVGraRawbpt6TkIvuv5w3ilMxxMbMcbEAKeyR7v1SklRbBoPshkuiIWVCdslRpZ-yCSHZFXSzICIT-eb7-QfTPvnNp08Lvisp0BSBcROw96g=w1280"
+alt="Industrial pipe rack and process piping network structural assessment">
+
+</div>
+
+<div class="content-text">
+
+<span class="tag">Mechanical & Structural Integrity</span>
+
+<h2>Mechanical Stress Integrity & Pipe Rack Audits</h2>
+
+<p class="section-description">
+Structural assessment of interconnected process
+piping networks, overhead support frames and
+secondary structural elements supporting high-temperature
+and high-pressure industrial operations.
+</p>
+
+<ul class="service-list">
+
+<li>
+<strong>Pipe Rack Structural Evaluations</strong>
+Weight-load reassessment, structural connection
+reviews and corrosion monitoring of critical
+overhead process pipe racks.
+</li>
+
+<li>
+<strong>Dynamic Equipment Support Audits</strong>
+Frequency and stress assessment of foundations
+supporting heavy rotating machinery, pumps
+and compressors.
+</li>
+
+<li>
+<strong>Thermal Stress & Anchor Point Mapping</strong>
+Evaluation of structural restraints, guides,
+supports and expansion joints to help prevent
+excessive stress transfer to supporting structures.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY INSPAX -->
+
+<section class="why-section">
+
+<div class="container">
+
+<span class="tag">Why Choose Inspax</span>
+
+<h2 class="section-heading">
+Why Target Plant Risk with Inspax?
+</h2>
+
+<p class="section-description">
+Our engineering approach combines physical
+inspection, technical assessment and risk-based
+evaluation to help industrial organizations
+understand their asset vulnerabilities and
+prioritize corrective actions.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-number">01 / TECHNICAL PRECISION</div>
+
+<h3>Forensic Precision</h3>
+
+<p>
+We go beyond generic inspection checklists.
+Our technical diagnostics focus on physical
+evidence, material behavior and actual
+structural conditions to support informed
+engineering decisions.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">02 / RISK MANAGEMENT</div>
+
+<h3>Risk-First Engineering Frameworks</h3>
+
+<p>
+We organize our findings around asset
+vulnerability and operational impact,
+helping management prioritize maintenance
+activities and capital expenditure where
+the risks are highest.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">03 / CODE COMPLIANCE</div>
+
+<h3>Code-Compliant Governance</h3>
+
+<p>
+Structural and engineering evaluations
+are aligned with applicable international
+safety and design benchmarks, including
+ASCE, AISC, ACI and relevant Indian
+Standard (IS) codes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ENGINEERING STANDARDS -->
+
+<section class="standards">
+
+<div class="container">
+
+<span class="tag">Engineering Standards</span>
+
+<h2 class="section-heading">
+International Engineering & Structural Codes
+</h2>
+
+<p class="section-description" style="margin:auto;">
+Our technical assessments consider applicable
+engineering standards and project-specific
+design requirements.
+</p>
+
+<div class="standards-box">
+
+<div class="standards-list">
+
+<span class="standard-item">ASCE</span>
+
+<span class="standard-item">AISC</span>
+
+<span class="standard-item">ACI</span>
+
+<span class="standard-item">Indian Standards (IS)</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="cta">
+
+<div class="container">
+
+<span class="tag">Get In Touch</span>
+
+<h2>Need Professional Plant Risk Assessment Services?</h2>
+
+<p>
+Contact Inspax for structural stability audits,
+foundation integrity assessments, industrial
+risk profiling and mechanical stress evaluations.
+</p>
+
+<a href="/contact-us/" class="primary-btn">
+Contact Our Engineering Team
+</a>
+
+
+<!-- CONTACT DETAILS -->
+
+<div class="contact-details">
+
+<div class="contact-item">
+
+<h3>Registered Address</h3>
+
+<p>
+Sadbhawna Colony, Johri Gaon,<br>
+Dehradun - 240003,<br>
+Uttarakhand, India
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>Phone</h3>
+
+<p>
+<a href="tel:+919068298693">
++91 9068298693
+</a><br>
+
+<a href="tel:+919560065131">
++91 9560065131
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>Email</h3>
+
+<p>
+<a href="mailto:info@inspax.in">
+info@inspax.in
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+</html>
