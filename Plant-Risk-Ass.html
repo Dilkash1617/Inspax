@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +38,192 @@
 #inspax-risk h3 {
     margin-top: 0;
 }
+
+/* =====================================
+   INSPAX NAVIGATION BAR
+   SAME STYLE AS FIRST NDT PAGE
+===================================== */
+
+#inspax-risk .site-header {
+    background: #071626;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#inspax-risk .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 74px;
+    gap: 20px;
+    position: relative;
+}
+
+#inspax-risk .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+#inspax-risk .brand-badge {
+    width: 38px;
+    height: 38px;
+    background: #f5a623;
+    color: #091827;
+    font-weight: 800;
+    font-size: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .5px;
+}
+
+#inspax-risk .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+#inspax-risk .brand-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+#inspax-risk .brand-tagline {
+    color: #9fb0c3;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+#inspax-risk .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+#inspax-risk .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#inspax-risk .nav-item {
+    position: relative;
+}
+
+#inspax-risk .nav-link {
+    color: #eef3f8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color .2s ease;
+}
+
+#inspax-risk .nav-link:hover,
+#inspax-risk .nav-item:hover > .nav-link,
+#inspax-risk .nav-item:focus-within > .nav-link {
+    color: #f5a623;
+}
+
+#inspax-risk .nav-link.active {
+    color: #f5a623;
+}
+
+#inspax-risk .chevron {
+    font-size: 11px;
+    opacity: .85;
+    transition: transform .2s ease;
+}
+
+#inspax-risk .nav-item:hover .chevron,
+#inspax-risk .nav-item:focus-within .chevron {
+    transform: rotate(180deg);
+}
+
+#inspax-risk .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 245px;
+    background: #0c2238;
+    border: 1px solid rgba(255,255,255,.12);
+    border-top: 3px solid #f5a623;
+    border-radius: 0 0 6px 6px;
+    padding: 8px 0;
+    box-shadow: 0 12px 28px rgba(0,0,0,.35);
+    z-index: 1100;
+}
+
+#inspax-risk .nav-item:hover .dropdown-menu,
+#inspax-risk .nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+#inspax-risk .dropdown-menu a {
+    display: block;
+    padding: 9px 16px;
+    color: #dce6f0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background .2s ease, color .2s ease;
+}
+
+#inspax-risk .dropdown-menu a:hover {
+    background: rgba(245,166,35,.14);
+    color: #f5a623;
+}
+
+#inspax-risk .nav-cta {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #f5a623;
+    color: #091827;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background .2s ease, transform .2s ease;
+}
+
+#inspax-risk .nav-cta:hover {
+    background: #fff;
+    color: #091827;
+}
+
+#inspax-risk .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.22);
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 11px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* TAG */
 
 #inspax-risk .tag {
     display: inline-block;
@@ -304,6 +489,64 @@
     margin-bottom: 0;
 }
 
+/* NAVBAR MOBILE RESPONSIVE */
+
+@media(max-width:960px) {
+
+    #inspax-risk .nav-toggle {
+        display: inline-block;
+    }
+
+    #inspax-risk .nav-right {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #071626;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px 5% 20px;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    #inspax-risk .nav-right.open {
+        display: flex;
+    }
+
+    #inspax-risk .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    #inspax-risk .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    #inspax-risk .dropdown-menu {
+        position: static;
+        background: rgba(255,255,255,.04);
+        border: none;
+        border-left: 2px solid #f5a623;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 4px 0 8px 12px;
+    }
+
+    #inspax-risk .nav-item.open .dropdown-menu {
+        display: block;
+    }
+
+    #inspax-risk .nav-cta {
+        text-align: center;
+        margin-top: 12px;
+    }
+}
+
 /* RESPONSIVE DESIGN */
 
 @media(max-width:768px) {
@@ -361,6 +604,127 @@
 <body>
 
 <div id="inspax-risk">
+
+<!-- =====================================
+     NAVIGATION BAR
+===================================== -->
+
+<header class="site-header">
+
+<div class="container nav-inner">
+
+<a href="/" target="_top" class="brand">
+
+<span class="brand-badge">IX</span>
+
+<span class="brand-text">
+<span class="brand-name">Inspax</span>
+<span class="brand-tagline">Inspection &amp; Certification Consultants</span>
+</span>
+
+</a>
+
+<button
+type="button"
+class="nav-toggle"
+aria-label="Toggle navigation"
+aria-expanded="false"
+onclick="toggleInspaxNav()">
+
+&#9776;
+
+</button>
+
+<nav class="nav-right" id="inspaxNavMenu" aria-label="Main Navigation">
+
+<ul class="nav-menu">
+
+<li class="nav-item">
+<a href="/" target="_top" class="nav-link">Home</a>
+</li>
+
+<li class="nav-item">
+
+<a href="/about-us/" target="_top" class="nav-link" onclick="return toggleInspaxDropdown(event, this)">
+About Us <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+
+<a href="/about-us/" target="_top">Who We Are</a>
+
+<a href="/about-us/independence-quality/" target="_top">
+Independence &amp; Quality
+</a>
+
+</div>
+
+</li>
+
+<li class="nav-item">
+
+<a href="/services/" target="_top" class="nav-link active" onclick="return toggleInspaxDropdown(event, this)">
+Services Offered <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+
+<a href="ndt-services.html">
+NDT &amp; Quality Assurance Services
+</a>
+
+<a href="TPI,BGAS-service.html">
+TPI, BGAS &amp; NACE Audits
+</a>
+
+<a href="Plant-Risk-Ass.html" target="_top">
+Plant Risk Assessment Services
+</a>
+
+<a href="Certified-NDT.html" target="_top">
+Certified NDT &amp; Technical Training
+</a>
+
+</div>
+
+</li>
+
+<li class="nav-item">
+
+<a href="/industries/" target="_top" class="nav-link" onclick="return toggleInspaxDropdown(event, this)">
+Industries We Serve <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+
+<a href="/industries/epc-contractors/" target="_top">
+EPC Contractors
+</a>
+
+<a href="/industries/manufacturing-fabrication/" target="_top">
+Manufacturing &amp; Fabrication
+</a>
+
+<a href="/industries/energy-utilities/" target="_top">
+Energy &amp; Utilities
+</a>
+
+</div>
+
+</li>
+
+</ul>
+
+<a href="/contact-us/" target="_top" class="nav-cta">
+Contact Us
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
 
 <!-- HERO SECTION -->
 
@@ -647,7 +1011,6 @@ engineering decisions.
 
 </div>
 
-
 <div class="why-card">
 
 <div class="why-number">02 / RISK MANAGEMENT</div>
@@ -663,7 +1026,6 @@ the risks are highest.
 </p>
 
 </div>
-
 
 <div class="why-card">
 
@@ -801,6 +1163,46 @@ info@inspax.in
 </section>
 
 </div>
+
+<!-- =====================================
+     NAVBAR JAVASCRIPT
+===================================== -->
+
+<script>
+
+function toggleInspaxNav() {
+
+    var nav = document.getElementById("inspaxNavMenu");
+    var btn = document.querySelector("#inspax-risk .nav-toggle");
+
+    if (!nav || !btn) return;
+
+    var isOpen = nav.classList.toggle("open");
+
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+}
+
+function toggleInspaxDropdown(event, linkEl) {
+
+    if (window.innerWidth <= 960) {
+
+        event.preventDefault();
+
+        var parentItem = linkEl.parentElement;
+
+        if (parentItem) {
+            parentItem.classList.toggle("open");
+        }
+
+        return false;
+    }
+
+    return true;
+
+}
+
+</script>
 
 </body>
 </html>
