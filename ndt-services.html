@@ -9,16 +9,29 @@
 <meta name="description" content="Explore Inspax industrial Non-Destructive Testing services, including conventional NDT, PAUT, TOFD, ultrasonic testing, radiography and pipeline integrity inspection.">
 
 <style>
+
 /* =========================
    INSPAX NDT PAGE
 ========================= */
+
+:root {
+    --c-navy-900: #0b1d33;
+    --c-navy-800: #0f2742;
+    --c-accent: #f2a900;
+    --sp-2: .75rem;
+    --sp-3: 1rem;
+    --sp-4: 1.5rem;
+    --header-h: 4.25rem;
+    --radius: 4px;
+    --step--1: .9rem;
+}
 
 #inspax-ndt {
     font-family: Arial, sans-serif;
     color: #263445;
     line-height: 1.7;
     background: #f7f9fc;
-    overflow: hidden;
+    overflow-x: clip;
 }
 
 #inspax-ndt * {
@@ -59,7 +72,224 @@
     max-width: 850px;
 }
 
-/* HERO */
+/* =========================
+   NAVBAR
+========================= */
+
+#inspax-ndt .site-header {
+    background: var(--c-navy-900);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#inspax-ndt .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-h);
+    gap: var(--sp-3);
+}
+
+#inspax-ndt .brand {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    text-decoration: none;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+#inspax-ndt .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--c-accent);
+    color: #111;
+    font-weight: 800;
+    border-radius: var(--radius);
+    letter-spacing: -.03em;
+}
+
+#inspax-ndt .brand-text {
+    display: grid;
+    line-height: 1.15;
+}
+
+#inspax-ndt .brand-text strong {
+    font-size: 1.15rem;
+    letter-spacing: .02em;
+}
+
+#inspax-ndt .brand-text small {
+    font-size: .68rem;
+    opacity: .8;
+    display: none;
+}
+
+#inspax-ndt .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    min-height: 2.75rem;
+    padding: 0 .9rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: var(--radius);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#inspax-ndt .nav-toggle-bars,
+#inspax-ndt .nav-toggle-bars::before,
+#inspax-ndt .nav-toggle-bars::after {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+    content: "";
+}
+
+#inspax-ndt .nav-toggle-bars::before {
+    position: absolute;
+    top: -6px;
+}
+
+#inspax-ndt .nav-toggle-bars::after {
+    position: absolute;
+    top: 6px;
+}
+
+#inspax-ndt .primary-nav {
+    position: absolute;
+    inset: var(--header-h) 0 auto 0;
+    background: var(--c-navy-800);
+    border-top: 1px solid rgba(255,255,255,.12);
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    display: none;
+}
+
+#inspax-ndt .primary-nav.is-open {
+    display: block;
+}
+
+#inspax-ndt .nav-list {
+    padding: var(--sp-2) 1rem var(--sp-4);
+    margin: 0;
+    list-style: none;
+}
+
+#inspax-ndt .nav-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+#inspax-ndt .nav-item > a:not(.btn) {
+    flex: 1;
+    padding: .85rem 0;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+#inspax-ndt .nav-item > a[aria-current="page"] {
+    color: var(--c-accent);
+}
+
+#inspax-ndt .nav-cta {
+    border: 0;
+    padding-top: var(--sp-3);
+}
+
+#inspax-ndt .nav-cta .btn {
+    flex: 1;
+}
+
+#inspax-ndt .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: .65rem 1.25rem;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+#inspax-ndt .btn-accent {
+    background: var(--c-accent);
+    color: #111;
+}
+
+#inspax-ndt .btn-accent:hover {
+    background: #ffbe2e;
+}
+
+#inspax-ndt .sub-toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+#inspax-ndt .sub-toggle::before {
+    content: "";
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    margin: auto;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform .15s;
+}
+
+#inspax-ndt .sub-toggle[aria-expanded="true"]::before {
+    transform: rotate(-135deg);
+}
+
+#inspax-ndt .sub-list {
+    display: none;
+    flex-basis: 100%;
+    padding: 0 0 var(--sp-2) var(--sp-3);
+    list-style: none;
+    margin: 0;
+}
+
+#inspax-ndt .sub-list.is-open {
+    display: block;
+}
+
+#inspax-ndt .sub-list a {
+    display: block;
+    padding: .55rem 0;
+    text-decoration: none;
+    color: #fff;
+    opacity: .9;
+    font-size: var(--step--1);
+}
+
+#inspax-ndt .sub-list a:hover {
+    color: var(--c-accent);
+}
+
+/* =========================
+   HERO
+========================= */
 
 #inspax-ndt .hero {
     background:
@@ -107,7 +337,9 @@
     background: white;
 }
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 #inspax-ndt .intro {
     padding: 75px 0;
@@ -117,7 +349,9 @@
     max-width: 950px;
 }
 
-/* CONVENTIONAL SERVICES */
+/* =========================
+   CONVENTIONAL SERVICES
+========================= */
 
 #inspax-ndt .conventional {
     padding: 75px 0;
@@ -163,7 +397,9 @@
     margin-bottom: 4px;
 }
 
-/* ADVANCED SERVICES */
+/* =========================
+   ADVANCED SERVICES
+========================= */
 
 #inspax-ndt .advanced {
     padding: 80px 0;
@@ -210,7 +446,9 @@
     margin-bottom: 0;
 }
 
-/* WHY NDT */
+/* =========================
+   WHY NDT
+========================= */
 
 #inspax-ndt .benefits {
     padding: 75px 0;
@@ -242,7 +480,9 @@
     margin-bottom: 0;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 #inspax-ndt .cta {
     padding: 75px 20px;
@@ -277,7 +517,94 @@
     background: white;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (min-width: 40em) {
+    #inspax-ndt .brand-text small {
+        display: block;
+    }
+}
+
+@media (min-width: 64em) {
+
+    #inspax-ndt .nav-toggle {
+        display: none;
+    }
+
+    #inspax-ndt .primary-nav {
+        position: static;
+        display: block;
+        background: none;
+        border: 0;
+        max-height: none;
+        overflow: visible;
+    }
+
+    #inspax-ndt .nav-list {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        padding: 0;
+    }
+
+    #inspax-ndt .nav-item {
+        border: 0;
+        flex-wrap: nowrap;
+    }
+
+    #inspax-ndt .nav-item > a:not(.btn) {
+        flex: none;
+        padding: .5rem .6rem;
+        font-size: .95rem;
+    }
+
+    #inspax-ndt .nav-item > a:not(.btn):hover {
+        color: var(--c-accent);
+    }
+
+    #inspax-ndt .nav-cta {
+        padding: 0 0 0 var(--sp-2);
+    }
+
+    #inspax-ndt .nav-cta .btn {
+        min-height: 2.5rem;
+        padding-inline: 1rem;
+    }
+
+    #inspax-ndt .sub-toggle {
+        width: 1.5rem;
+        margin-left: -.5rem;
+    }
+
+    #inspax-ndt .sub-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 19rem;
+        background: var(--c-navy-800);
+        border: 1px solid rgba(255,255,255,.14);
+        border-top: 3px solid var(--c-accent);
+        padding: .25rem 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    }
+
+    #inspax-ndt .sub-list a {
+        padding: .65rem 1rem;
+        font-size: .92rem;
+    }
+
+    #inspax-ndt .sub-list a:hover {
+        background: rgba(255,255,255,.06);
+    }
+
+    #inspax-ndt .has-sub:hover > .sub-list,
+    #inspax-ndt .sub-list.is-open {
+        display: block;
+    }
+}
 
 @media(max-width:768px) {
 
@@ -319,12 +646,106 @@
 
 <div id="inspax-ndt">
 
-<!-- HERO SECTION -->
+<!-- =========================
+     NAVIGATION BAR
+========================= -->
+
+<header class="site-header">
+<div class="container header-inner">
+
+<a class="brand" href="/" target="_top" aria-label="Inspax Inspections – home">
+
+<span class="brand-mark" aria-hidden="true">IX</span>
+
+<span class="brand-text">
+<strong>Inspax</strong>
+<small>Inspection &amp; Certification Consultants</small>
+</span>
+
+</a>
+
+<button class="nav-toggle" type="button"
+aria-expanded="false" aria-controls="primary-nav">
+
+<span class="nav-toggle-label">Menu</span>
+<span class="nav-toggle-bars" aria-hidden="true"></span>
+
+</button>
+
+<nav id="primary-nav" class="primary-nav" aria-label="Primary">
+
+<ul class="nav-list">
+
+<li class="nav-item">
+<a href="/" target="_top">Home</a>
+</li>
+
+<li class="nav-item has-sub">
+
+<a href="/about-us/" target="_top">About Us</a>
+
+<button class="sub-toggle" type="button"
+aria-expanded="false" aria-label="About Us submenu"></button>
+
+<ul class="sub-list">
+<li><a href="/about-us/" target="_top">Who We Are</a></li>
+<li><a href="/about-us/independence-quality/" target="_top">Independence &amp; Quality</a></li>
+<li><a href="C:\Users\ABC\Desktop\Inspax html\code web\PDF FOLDERS\Inspax_Brochure.pdf.pdf">Download PDF Brochure</a></li>
+</ul>
+
+</li>
+
+<li class="nav-item has-sub">
+
+<a href="/services-offered/" target="_top" aria-current="page">Services Offered</a>
+
+<button class="sub-toggle" type="button"
+aria-expanded="false" aria-label="Services submenu"></button>
+
+<ul class="sub-list">
+<li><a href="ndt-services.html">NDT &amp; Quality Assurance Services</a></li>
+<li><a href="TPI,BGAS-service.html">TPI, BGAS &amp; NACE Audits</a></li>
+<li><a href="Plant-Risk-Ass.html">Plant Risk Assessment Services</a></li>
+<li><a href="Certified-NDT.html">Certified NDT &amp; Technical Training</a></li>
+</ul>
+
+</li>
+
+<li class="nav-item has-sub">
+
+<a href="/industries-we-serve/" target="_top">Industries We Serve</a>
+
+<button class="sub-toggle" type="button"
+aria-expanded="false" aria-label="Industries submenu"></button>
+
+<ul class="sub-list">
+<li><a href="/industries-we-serve/oil-gas-petrochemicals-chemical-processing/" target="_top">Oil, Gas, Petrochemicals &amp; Chemical Processing</a></li>
+<li><a href="/industries-we-serve/civil-infrastructure-transportation-utilities/" target="_top">Civil Infrastructure, Transportation &amp; Utilities</a></li>
+<li><a href="/industries-we-serve/power-generation-transmission-renewable-energy/" target="_top">Power Generation, Transmission &amp; Renewable Energy</a></li>
+<li><a href="/industries-we-serve/heavy-fabrication-steel-advanced-manufacturing/" target="_top">Heavy Fabrication, Steel &amp; Advanced Manufacturing</a></li>
+</ul>
+
+</li>
+
+<li class="nav-item nav-cta">
+<a class="btn btn-accent" href="/contact-us/" target="_top">Contact Us</a>
+</li>
+
+</ul>
+</nav>
+
+</div>
+</header>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
 
 <section class="hero">
 <div class="container hero-content">
 
-<span class="tag">Inspection & Certification</span>
+<span class="tag">Inspection &amp; Certification</span>
 
 <h1>Non-Destructive Testing Services</h1>
 
@@ -334,7 +755,7 @@ to detect material defects, weld discontinuities and
 corrosion without damaging industrial assets.
 </p>
 
-<a href="/contact-us/" class="hero-btn">
+<a href="/contact-us/" target="_top" class="hero-btn">
 Request an Inspection
 </a>
 
@@ -342,7 +763,9 @@ Request an Inspection
 </section>
 
 
-<!-- INTRODUCTION -->
+<!-- =========================
+     INTRODUCTION
+========================= -->
 
 <section class="intro">
 <div class="container intro-content">
@@ -365,7 +788,9 @@ components or disrupting asset integrity.
 </section>
 
 
-<!-- CONVENTIONAL NDT -->
+<!-- =========================
+     CONVENTIONAL NDT
+========================= -->
 
 <section class="conventional">
 <div class="container content-grid">
@@ -385,13 +810,13 @@ alt="Industrial non-destructive testing inspection">
 <ul class="service-list">
 
 <li>
-<strong>Visual Testing (VT) & Remote Visual Inspection (RVI)</strong>
+<strong>Visual Testing (VT) &amp; Remote Visual Inspection (RVI)</strong>
 High-resolution drone technology and advanced optical
 instruments for detailed asset monitoring and inspection.
 </li>
 
 <li>
-<strong>Surface & Flaw Detection</strong>
+<strong>Surface &amp; Flaw Detection</strong>
 Dye Penetrant Testing (DPT) and Magnetic Particle
 Inspection (MPI) to identify surface-breaking defects.
 </li>
@@ -416,7 +841,9 @@ for internal volumetric inspection of welds and materials.
 </section>
 
 
-<!-- ADVANCED NDT -->
+<!-- =========================
+     ADVANCED NDT
+========================= -->
 
 <section class="advanced">
 <div class="container">
@@ -435,7 +862,7 @@ and comprehensive pipeline condition assessment.
 
 <div class="service-card">
 <span class="service-number">01 / ADVANCED ULTRASONICS</span>
-<h3>Phased Array Ultrasonic Testing (PAUT) & TOFD</h3>
+<h3>Phased Array Ultrasonic Testing (PAUT) &amp; TOFD</h3>
 <p>
 High-precision weld scanning using Phased Array
 Ultrasonic Testing and Time of Flight Diffraction
@@ -480,7 +907,9 @@ and material discontinuities.
 </section>
 
 
-<!-- WHY NDT -->
+<!-- =========================
+     WHY NDT
+========================= -->
 
 <section class="benefits">
 <div class="container">
@@ -528,7 +957,9 @@ techniques to support informed maintenance decisions.
 </section>
 
 
-<!-- CONTACT CTA -->
+<!-- =========================
+     CONTACT CTA
+========================= -->
 
 <section class="cta">
 <div class="container">
@@ -540,12 +971,124 @@ Connect with Inspax for industrial inspection,
 testing and certification solutions.
 </p>
 
-<a href="/contact-us/">Contact Our Team</a>
+<a href="/contact-us/" target="_top">Contact Our Team</a>
 
 </div>
 </section>
 
 </div>
+
+
+<!-- =========================
+     NAVBAR JAVASCRIPT
+========================= -->
+
+<script>
+(function () {
+    'use strict';
+
+    var desktop = window.matchMedia('(min-width: 64em)');
+    var nav = document.getElementById('primary-nav');
+    var toggle = document.querySelector('#inspax-ndt .nav-toggle');
+
+    /* ---------- Mobile menu ---------- */
+    function setMenu(open) {
+        if (!nav || !toggle) return;
+
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+
+        toggle.querySelector('.nav-toggle-label').textContent =
+            open ? 'Close' : 'Menu';
+    }
+
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+    }
+
+    /* ---------- Submenus ---------- */
+    var subToggles = document.querySelectorAll('#inspax-ndt .sub-toggle');
+
+    function setSub(btn, open) {
+        var list = btn.parentElement.querySelector('.sub-list');
+
+        btn.setAttribute('aria-expanded', String(open));
+
+        if (list) {
+            list.classList.toggle('is-open', open);
+        }
+    }
+
+    function closeAllSubs(except) {
+        subToggles.forEach(function (btn) {
+            if (btn !== except) {
+                setSub(btn, false);
+            }
+        });
+    }
+
+    subToggles.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var open = btn.getAttribute('aria-expanded') !== 'true';
+
+            closeAllSubs(btn);
+            setSub(btn, open);
+        });
+    });
+
+    /* ---------- Close on Escape ---------- */
+    document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+
+        var openBtn = document.querySelector(
+            '#inspax-ndt .sub-toggle[aria-expanded="true"]'
+        );
+
+        if (openBtn) {
+            setSub(openBtn, false);
+            openBtn.focus();
+            return;
+        }
+
+        if (toggle && toggle.getAttribute('aria-expanded') === 'true') {
+            setMenu(false);
+            toggle.focus();
+        }
+    });
+
+    /* ---------- Close submenus outside ---------- */
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('#inspax-ndt .has-sub')) {
+            closeAllSubs(null);
+        }
+    });
+
+    /* ---------- Close submenus on outside focus ---------- */
+    document.addEventListener('focusin', function (e) {
+        if (
+            desktop.matches &&
+            !e.target.closest('#inspax-ndt .has-sub')
+        ) {
+            closeAllSubs(null);
+        }
+    });
+
+    /* ---------- Reset at desktop breakpoint ---------- */
+    function onBreakpoint() {
+        setMenu(false);
+        closeAllSubs(null);
+    }
+
+    if (desktop.addEventListener) {
+        desktop.addEventListener('change', onBreakpoint);
+    } else {
+        desktop.addListener(onBreakpoint);
+    }
+
+})();
+</script>
 
 </body>
 </html>
