@@ -1,474 +1,1000 @@
-
 <div id="inspax-training">
-    
-  <style>
-    #inspax-training {
-      --navy: #102b50;
-      --navy2: #183e6c;
-      --orange: #f28c28;
-      --ink: #263548;
-      --muted: #64748b;
-      --light: #f4f7fb;
-      --white: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      line-height: 1.7;
-      width: 100%;
-      overflow: hidden;
+
+<style>
+
+/* =====================================
+   INSPAX TRAINING PAGE
+===================================== */
+
+#inspax-training {
+    --navy: #102b50;
+    --navy2: #183e6c;
+    --orange: #f28c28;
+    --ink: #263548;
+    --muted: #64748b;
+    --light: #f4f7fb;
+    --white: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    width: 100%;
+    overflow: hidden;
+}
+
+#inspax-training * {
+    box-sizing: border-box;
+}
+
+#inspax-training .wrap {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+/* =====================================
+   NAVIGATION BAR
+   SAME STYLE AS FIRST NDT PAGE
+===================================== */
+
+#inspax-training .site-header {
+    background: #071626;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#inspax-training .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 74px;
+    gap: 20px;
+    position: relative;
+}
+
+#inspax-training .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+#inspax-training .brand-badge {
+    width: 38px;
+    height: 38px;
+    background: #f5a623;
+    color: #091827;
+    font-weight: 800;
+    font-size: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .5px;
+}
+
+#inspax-training .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+#inspax-training .brand-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+#inspax-training .brand-tagline {
+    color: #9fb0c3;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+#inspax-training .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+#inspax-training .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#inspax-training .nav-item {
+    position: relative;
+}
+
+#inspax-training .nav-link {
+    color: #eef3f8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color .2s ease;
+}
+
+#inspax-training .nav-link:hover,
+#inspax-training .nav-item:hover > .nav-link,
+#inspax-training .nav-item:focus-within > .nav-link {
+    color: #f5a623;
+}
+
+#inspax-training .nav-link.active {
+    color: #f5a623;
+}
+
+#inspax-training .chevron {
+    font-size: 11px;
+    opacity: .85;
+    transition: transform .2s ease;
+}
+
+#inspax-training .nav-item:hover .chevron,
+#inspax-training .nav-item:focus-within .chevron {
+    transform: rotate(180deg);
+}
+
+#inspax-training .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 245px;
+    background: #0c2238;
+    border: 1px solid rgba(255,255,255,.12);
+    border-top: 3px solid #f5a623;
+    border-radius: 0 0 6px 6px;
+    padding: 8px 0;
+    box-shadow: 0 12px 28px rgba(0,0,0,.35);
+    z-index: 1100;
+}
+
+#inspax-training .nav-item:hover .dropdown-menu,
+#inspax-training .nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+#inspax-training .dropdown-menu a {
+    display: block;
+    padding: 9px 16px;
+    color: #dce6f0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background .2s ease, color .2s ease;
+}
+
+#inspax-training .dropdown-menu a:hover {
+    background: rgba(245,166,35,.14);
+    color: #f5a623;
+}
+
+#inspax-training .nav-cta {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #f5a623;
+    color: #091827;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background .2s ease, transform .2s ease;
+}
+
+#inspax-training .nav-cta:hover {
+    background: #fff;
+    color: #091827;
+}
+
+#inspax-training .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.22);
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 11px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* HERO */
+
+#inspax-training .hero {
+    position: relative;
+    padding: 90px 20px;
+    background: linear-gradient(120deg, rgba(9,30,57,.97), rgba(16,57,99,.88));
+    color: white;
+    text-align: center;
+}
+
+#inspax-training .eyebrow {
+    display: inline-block;
+    color: #ffb45f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+#inspax-training h1 {
+    color: white;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    margin: 0 auto 20px;
+    max-width: 900px;
+    font-weight: 800;
+}
+
+#inspax-training .hero p {
+    color: #e3ebf5;
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+}
+
+#inspax-training .hero-line {
+    width: 75px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--orange);
+    margin: 28px auto 0;
+}
+
+/* INTRO */
+
+#inspax-training .intro {
+    padding: 65px 0 35px;
+    text-align: center;
+}
+
+#inspax-training .intro h2,
+#inspax-training .advantage h2 {
+    color: var(--navy);
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+
+#inspax-training .intro p {
+    max-width: 850px;
+    margin: auto;
+    color: var(--muted);
+}
+
+/* TRAINING CARDS */
+
+#inspax-training .training-list {
+    padding: 25px 0 70px;
+}
+
+#inspax-training .training-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 35px;
+    margin: 0 0 35px;
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(16,43,80,.07);
+}
+
+#inspax-training .training-card:nth-child(even) .training-image {
+    order: 2;
+}
+
+#inspax-training .training-image {
+    min-height: 330px;
+    background: #e8edf4;
+}
+
+#inspax-training .training-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 330px;
+    display: block;
+    object-fit: cover;
+}
+
+#inspax-training .training-content {
+    padding: 34px 32px 34px 0;
+    align-self: center;
+}
+
+#inspax-training .training-card:nth-child(even) .training-content {
+    padding: 34px 0 34px 32px;
+}
+
+#inspax-training .number {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    background: #fff1e3;
+    color: #d96c08;
+    border-radius: 50%;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+#inspax-training h3 {
+    color: var(--navy);
+    font-size: 23px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+}
+
+#inspax-training .description {
+    color: var(--muted);
+    margin: 0 0 17px;
+}
+
+#inspax-training .training-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#inspax-training .training-content li {
+    position: relative;
+    padding: 0 0 11px 22px;
+    color: #435267;
+    font-size: 14px;
+}
+
+#inspax-training .training-content li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+}
+
+#inspax-training .training-content li strong {
+    color: var(--navy);
+}
+
+/* ADVANTAGE */
+
+#inspax-training .advantage {
+    background: var(--light);
+    padding: 70px 0;
+}
+
+#inspax-training .advantage-intro {
+    max-width: 760px;
+    margin-bottom: 30px;
+}
+
+#inspax-training .advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+#inspax-training .advantage-item {
+    background: white;
+    border-radius: 12px;
+    padding: 28px 24px;
+    border-top: 4px solid var(--orange);
+    box-shadow: 0 6px 20px rgba(16,43,80,.05);
+}
+
+#inspax-training .advantage-item h3 {
+    font-size: 19px;
+    margin: 0 0 10px;
+}
+
+#inspax-training .advantage-item p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* CTA */
+
+#inspax-training .cta {
+    padding: 65px 20px;
+    background: var(--navy);
+    text-align: center;
+    color: white;
+}
+
+#inspax-training .cta h2 {
+    color: white;
+    font-size: clamp(26px, 3.5vw, 36px);
+    margin: 0 0 12px;
+}
+
+#inspax-training .cta p {
+    color: #dce6f2;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+#inspax-training .cta-button {
+    display: inline-block;
+    background: var(--orange);
+    color: white !important;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+#inspax-training .cta-button:hover {
+    background: #dc7414;
+    transform: translateY(-2px);
+}
+
+/* CONTACT */
+
+#inspax-training .contact {
+    padding: 60px 0;
+    background: #f7f9fc;
+}
+
+#inspax-training .contact h2 {
+    text-align: center;
+    color: var(--navy);
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+
+#inspax-training .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#inspax-training .contact-item {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #e5eaf1;
+    text-align: center;
+}
+
+#inspax-training .contact-item h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin: 0 0 8px;
+}
+
+#inspax-training .contact-item p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+#inspax-training .contact-item a {
+    color: var(--navy2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* NAVBAR MOBILE RESPONSIVE */
+
+@media(max-width:960px) {
+
+    #inspax-training .nav-toggle {
+        display: inline-block;
     }
-    #inspax-training * { box-sizing: border-box; }
-    #inspax-training .wrap {
-      width: min(1160px, 92%);
-      margin: auto;
+
+    #inspax-training .nav-right {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #071626;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px 5% 20px;
+        border-bottom: 1px solid rgba(255,255,255,.12);
     }
-    #inspax-training .hero {
-      position: relative;
-      padding: 90px 20px;
-      background: linear-gradient(120deg, rgba(9,30,57,.97), rgba(16,57,99,.88));
-      color: white;
-      text-align: center;
+
+    #inspax-training .nav-right.open {
+        display: flex;
     }
-    #inspax-training .eyebrow {
-      display: inline-block;
-      color: #ffb45f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 14px;
+
+    #inspax-training .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
     }
-    #inspax-training h1 {
-      color: white;
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.15;
-      margin: 0 auto 20px;
-      max-width: 900px;
-      font-weight: 800;
+
+    #inspax-training .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
     }
-    #inspax-training .hero p {
-      color: #e3ebf5;
-      max-width: 850px;
-      margin: auto;
-      font-size: 17px;
+
+    #inspax-training .dropdown-menu {
+        position: static;
+        background: rgba(255,255,255,.04);
+        border: none;
+        border-left: 2px solid #f5a623;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 4px 0 8px 12px;
     }
-    #inspax-training .hero-line {
-      width: 75px;
-      height: 4px;
-      border-radius: 4px;
-      background: var(--orange);
-      margin: 28px auto 0;
+
+    #inspax-training .nav-item.open .dropdown-menu {
+        display: block;
     }
-    #inspax-training .intro {
-      padding: 65px 0 35px;
-      text-align: center;
+
+    #inspax-training .nav-cta {
+        text-align: center;
+        margin-top: 12px;
     }
-    #inspax-training .intro h2,
-    #inspax-training .advantage h2 {
-      color: var(--navy);
-      font-size: clamp(26px, 3.5vw, 36px);
-      line-height: 1.25;
-      margin: 0 0 16px;
-    }
-    #inspax-training .intro p {
-      max-width: 850px;
-      margin: auto;
-      color: var(--muted);
-    }
-    #inspax-training .training-list {
-      padding: 25px 0 70px;
-    }
+}
+
+/* PAGE RESPONSIVE */
+
+@media(max-width:800px) {
+
     #inspax-training .training-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      gap: 35px;
-      margin: 0 0 35px;
-      background: white;
-      border: 1px solid #e5eaf1;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 28px rgba(16,43,80,.07);
-    }
-    #inspax-training .training-card:nth-child(even) .training-image {
-      order: 2;
-    }
-    #inspax-training .training-image {
-      min-height: 330px;
-      background: #e8edf4;
-    }
-    #inspax-training .training-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 330px;
-      display: block;
-      object-fit: cover;
-    }
-    #inspax-training .training-content {
-      padding: 34px 32px 34px 0;
-      align-self: center;
-    }
-    #inspax-training .training-card:nth-child(even) .training-content {
-      padding: 34px 0 34px 32px;
-    }
-    #inspax-training .number {
-      display: inline-flex;
-      width: 38px;
-      height: 38px;
-      align-items: center;
-      justify-content: center;
-      background: #fff1e3;
-      color: #d96c08;
-      border-radius: 50%;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-    #inspax-training h3 {
-      color: var(--navy);
-      font-size: 23px;
-      line-height: 1.3;
-      margin: 0 0 12px;
-    }
-    #inspax-training .description {
-      color: var(--muted);
-      margin: 0 0 17px;
-    }
-    #inspax-training .training-content ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    #inspax-training .training-content li {
-      position: relative;
-      padding: 0 0 11px 22px;
-      color: #435267;
-      font-size: 14px;
-    }
-    #inspax-training .training-content li:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--orange);
-    }
-    #inspax-training .training-content li strong {
-      color: var(--navy);
-    }
-    #inspax-training .advantage {
-      background: var(--light);
-      padding: 70px 0;
-    }
-    #inspax-training .advantage-intro {
-      max-width: 760px;
-      margin-bottom: 30px;
-    }
-    #inspax-training .advantage-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    #inspax-training .advantage-item {
-      background: white;
-      border-radius: 12px;
-      padding: 28px 24px;
-      border-top: 4px solid var(--orange);
-      box-shadow: 0 6px 20px rgba(16,43,80,.05);
-    }
-    #inspax-training .advantage-item h3 {
-      font-size: 19px;
-      margin: 0 0 10px;
-    }
-    #inspax-training .advantage-item p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
-    #inspax-training .cta {
-      padding: 65px 20px;
-      background: var(--navy);
-      text-align: center;
-      color: white;
-    }
-    #inspax-training .cta h2 {
-      color: white;
-      font-size: clamp(26px, 3.5vw, 36px);
-      margin: 0 0 12px;
-    }
-    #inspax-training .cta p {
-      color: #dce6f2;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
-    #inspax-training .cta-button {
-      display: inline-block;
-      background: var(--orange);
-      color: white !important;
-      text-decoration: none;
-      padding: 13px 28px;
-      border-radius: 6px;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-    #inspax-training .cta-button:hover {
-      background: #dc7414;
-      transform: translateY(-2px);
-    }
-    #inspax-training .contact {
-      padding: 60px 0;
-      background: #f7f9fc;
-    }
-    #inspax-training .contact h2 {
-      text-align: center;
-      color: var(--navy);
-      font-size: 30px;
-      margin: 0 0 30px;
-    }
-    #inspax-training .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    #inspax-training .contact-item {
-      background: white;
-      padding: 24px;
-      border-radius: 10px;
-      border: 1px solid #e5eaf1;
-      text-align: center;
-    }
-    #inspax-training .contact-item h3 {
-      color: var(--navy);
-      font-size: 17px;
-      margin: 0 0 8px;
-    }
-    #inspax-training .contact-item p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
-    #inspax-training .contact-item a {
-      color: var(--navy2);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    @media(max-width: 800px) {
-      #inspax-training .training-card {
         grid-template-columns: 1fr;
         gap: 0;
-      }
-      #inspax-training .training-card:nth-child(even) .training-image {
+    }
+
+    #inspax-training .training-card:nth-child(even) .training-image {
         order: 0;
-      }
-      #inspax-training .training-image,
-      #inspax-training .training-image img {
+    }
+
+    #inspax-training .training-image,
+    #inspax-training .training-image img {
         min-height: 240px;
         max-height: 320px;
-      }
-      #inspax-training .training-content,
-      #inspax-training .training-card:nth-child(even) .training-content {
-        padding: 26px 24px 30px;
-      }
-      #inspax-training .advantage-grid,
-      #inspax-training .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      #inspax-training .hero {
-        padding: 70px 18px;
-      }
     }
-  </style>
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Inspax Inspection & Certification Consultants</span>
-      <h1>Certified NDT & Technical Training Programs</h1>
-      <p>Industry-recognized certified training programs engineered to upskill your technical workforce, enforce code compliance, and maximize field-level inspection precision. We deliver rigorous, data-driven curricula across non-destructive testing, corrosion control, operational excellence, and next-generation asset intelligence frameworks.</p>
-      <div class="hero-line"></div>
-    </div>
-  </section>
+    #inspax-training .training-content,
+    #inspax-training .training-card:nth-child(even) .training-content {
+        padding: 26px 24px 30px;
+    }
 
-  <section class="intro">
-    <div class="wrap">
-      <h2>Build Technical Competence. Strengthen Inspection Quality.</h2>
-      <p>Inspax training programs combine practical industrial knowledge, code-based learning, and modern inspection technologies. Our training tracks are designed to help professionals develop the technical confidence and evidence-based skills required in demanding industrial environments.</p>
-    </div>
-  </section>
+    #inspax-training .advantage-grid,
+    #inspax-training .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-  <section class="training-list">
-    <div class="wrap">
+    #inspax-training .hero {
+        padding: 70px 18px;
+    }
+}
 
-      <!-- 1. NDT Training -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="C:\Users\ABC\Desktop\Inspax html\code web\images\Services-offered folder\SERVICE-img.png" alt="Instructor leading an industrial technical training session">
-        </div>
-        <div class="training-content">
-          <span class="number">01</span>
-          <h3>Industrial Non-Destructive Testing (ASNT NDT Level I & II)</h3>
-          <p class="description">Rigorous qualification tracks designed to master subsurface flaw detection and surface discontinuity evaluation under strict international code frameworks.</p>
-          <ul>
-            <li><strong>Volumetric Methods Mastery:</strong> Advanced instruction in Ultrasonic Testing (UT) calibration, signal interpretation, and Radiographic Testing (RT) film interpretation.</li>
-            <li><strong>Surface & Subsurface Diagnostics:</strong> Comprehensive hands-on protocols for Magnetic Particle Testing (MT), Liquid Penetrant Testing (PT), and high-precision Visual Testing (VT).</li>
-            <li><strong>Code-Compliant Evaluation:</strong> Training focused on execution and defect grading in accordance with ASME Section V, AWS D1.1, and API standards.</li>
-          </ul>
-        </div>
-      </article>
+</style>
 
-      <!-- 2. Welding Inspection -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1100&q=85" alt="Welder performing precision industrial fabrication">
-        </div>
-        <div class="training-content">
-          <span class="number">02</span>
-          <h3>Welding Inspection Technologies (AWS & CSWIP Prep)</h3>
-          <p class="description">Technical training focused on the physics of metallurgy, welding procedure validation, and structural weld defect identification.</p>
-          <ul>
-            <li><strong>WPS / PQR Analysis:</strong> Training personnel to accurately interpret Welding Procedure Specifications (WPS) and Procedure Qualification Records (PQR).</li>
-            <li><strong>Weld Defect Morphology:</strong> Microscopic and visual identification of undercut, lack of fusion, porosity, and hydrogen-induced cracking (HIC).</li>
-            <li><strong>Structural Compliance:</strong> Defect boundary evaluation mapped to structural codes to minimize costly on-site weld rejections and rework.</li>
-          </ul>
-        </div>
-      </article>
 
-      <!-- 3. Coatings -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt="Industrial steel and protective coating work">
-        </div>
-        <div class="training-content">
-          <span class="number">03</span>
-          <h3>Protective Coatings & Corrosion Control (BGAS-CSWIP & NACE Alignment)</h3>
-          <p class="description">Specialized technical tracks designed to eliminate premature coating failures and manage aggressive environmental degradation on critical steel and concrete assets.</p>
-          <ul>
-            <li><strong>Substrate Preparation & Ambient Controls:</strong> Quantitative training on anchor profile measurement, surface cleanliness metrics, and psychrometric calculation windows.</li>
-            <li><strong>Application Surveillance & DFT Metrics:</strong> Precision mastery of wet and dry film thickness verification, inter-coat adhesion testing, and curing log governance.</li>
-            <li><strong>Advanced Holiday Detection:</strong> High-voltage and low-voltage spark testing methodologies to isolate microscopic voids and discontinuities in critical protective linings.</li>
-          </ul>
-        </div>
-      </article>
+<!-- =====================================
+     NAVIGATION BAR HTML
+===================================== -->
 
-      <!-- 4. AI and Digital Intelligence -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1100&q=85" alt="Artificial intelligence and digital technology workspace">
-        </div>
-        <div class="training-content">
-          <span class="number">04</span>
-          <h3>Next-Gen Inspection: AI Use Cases & Digital Asset Intelligence</h3>
-          <p class="description">Next-generation frameworks designed to integrate machine learning, computer vision, and structured data verification into traditional QA/QC field workflows.</p>
-          <ul>
-            <li><strong>Computer Vision for Automated Defect Detection:</strong> Training inspectors to deploy and calibrate AI models for real-time automated surface flaw, pitting, and crack classification.</li>
-            <li><strong>Sensor Data Pipelines & RAG Integration:</strong> Building automated workflows where field NDT data feeds into centralized contract and code compliance engines for instant verification.</li>
-            <li><strong>Digital Audit Trails:</strong> Developing step-by-step electronic logs for field readings to support data governance and commercial traceability.</li>
-          </ul>
-        </div>
-      </article>
+<header class="site-header">
 
-      <!-- 5. API Inspection -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1100&q=85" alt="Automated industrial equipment inspection">
-        </div>
-        <div class="training-content">
-          <span class="number">05</span>
-          <h3>Heavy Industry Equipment Inspection (API 510, 570, 653 Prep)</h3>
-          <p class="description">Elite preparatory tracks tailored for in-service inspectors managing critical static assets.</p>
-          <ul>
-            <li><strong>Pressure Vessel Inspection (API 510):</strong> Remaining life calculations, degradation mechanisms, and repair protocol validation.</li>
-            <li><strong>Process Piping Inspection (API 570):</strong> Thickness measurement locations (TMLs), corrosion-under-insulation (CUI) tracking, and pressure testing safety.</li>
-            <li><strong>Aboveground Storage Tanks (API 653):</strong> Tank bottom settlement evaluation, cathodic protection monitoring, and shell integrity mapping.</li>
-          </ul>
-        </div>
-      </article>
+<div class="wrap nav-inner">
 
-      <!-- 6. QA/QC Governance -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&q=85" alt="Technical project documentation and quality assurance review">
-        </div>
-        <div class="training-content">
-          <span class="number">06</span>
-          <h3>Technical QA/QC Governance & Project Turnover Auditing</h3>
-          <p class="description">Operational training engineered to bridge the gap between physical field testing and flawless commercial project delivery.</p>
-          <ul>
-            <li><strong>Quality Dossier Compilation:</strong> Systematically structuring manufacturing record books (MRBs), material test reports (MTRs), and NDT clearance logs.</li>
-            <li><strong>Vendor Shop Surveillance Auditing:</strong> Training third-party inspectors to execute structured factory audits and non-conformance logging.</li>
-            <li><strong>Phase-Gate Quality Control:</strong> Implementing mechanical completion and pre-commissioning check-sheets to reduce project handover liabilities.</li>
-          </ul>
-        </div>
-      </article>
+<a href="/" target="_top" class="brand">
 
-      <!-- 7. Lean Six Sigma -->
-      <article class="training-card">
-        <div class="training-image">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1100&q=85" alt="Industrial operations and process improvement team discussion">
-        </div>
-        <div class="training-content">
-          <span class="number">07</span>
-          <h3>Quantitative Operational Excellence (Lean Six Sigma for Heavy Industry)</h3>
-          <p class="description">Statistical process control tailored specifically for manufacturing yards, fabrication shops, and large-scale industrial projects.</p>
-          <ul>
-            <li><strong>DMAIC Methodology Deployment:</strong> Root-cause analysis frameworks applied directly to reducing welding defect rates and structural non-conformances.</li>
-            <li><strong>Statistical Process Control (SPC):</strong> Utilizing control charts and capability indices (Cp/Cpk) to stabilize fabrication and casting yard production lines.</li>
-          </ul>
-        </div>
-      </article>
+<span class="brand-badge">IX</span>
 
-    </div>
-  </section>
+<span class="brand-text">
+<span class="brand-name">Inspax</span>
+<span class="brand-tagline">Inspection &amp; Certification Consultants</span>
+</span>
 
-  <section class="advantage">
-    <div class="wrap">
-      <div class="advantage-intro">
-        <span class="eyebrow">Why Choose Inspax</span>
-        <h2>The Inspax Technical Training Advantage</h2>
-        <p>Our training approach prioritizes practical engineering competence, recognized technical frameworks, and measurable performance in the field.</p>
-      </div>
-      <div class="advantage-grid">
-        <div class="advantage-item">
-          <h3>Code-First Methodology</h3>
-          <p>Every module is systematically mapped to relevant international engineering standards, including ASME, ASTM, API, AWS, ISO, and AMPP.</p>
-        </div>
-        <div class="advantage-item">
-          <h3>Evidence-Based Metrics</h3>
-          <p>We focus on measurable competency tracking, helping technical personnel identify risks and support inspection findings with defensible field data.</p>
-        </div>
-        <div class="advantage-item">
-          <h3>Practical, Focused Learning</h3>
-          <p>Our programs emphasize hardware precision, structural integrity, asset compliance, and real-world industrial inspection challenges.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+</a>
 
-  <section class="cta">
-    <div class="wrap">
-      <h2>Upgrade Your Technical Workforce with Inspax</h2>
-      <p>Connect with our team to discuss technical training requirements, program scope, and workforce competency development for your industrial projects.</p>
-      <a class="cta-button" href="/contact-us/">Enquire About Training</a>
-    </div>
-  </section>
+<button
+type="button"
+class="nav-toggle"
+aria-label="Toggle navigation"
+aria-expanded="false"
+onclick="toggleInspaxTrainingNav()">
 
-  <section class="contact">
-    <div class="wrap">
-      <h2>Contact Us</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <h3>Registered Address</h3>
-          <p>Sadbhawna Colony, Johri Gaon,<br>Dehradun - 240003,<br>Uttarakhand, India</p>
-        </div>
-        <div class="contact-item">
-          <h3>Phone</h3>
-          <p><a href="tel:+919068298693">+91 9068298693</a><br>
-          <a href="tel:+919560065131">+91 9560065131</a></p>
-        </div>
-        <div class="contact-item">
-          <h3>Email</h3>
-          <p><a href="mailto:info@inspax.in">info@inspax.in</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
+&#9776;
+
+</button>
+
+<nav class="nav-right" id="inspaxTrainingNavMenu" aria-label="Main Navigation">
+
+<ul class="nav-menu">
+
+<li class="nav-item">
+<a href="/" target="_top" class="nav-link">Home</a>
+</li>
+
+<li class="nav-item">
+
+<a href="/about-us/" target="_top" class="nav-link" onclick="return toggleInspaxTrainingDropdown(event, this)">
+About Us <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="/about-us/" target="_top">Who We Are</a>
+<a href="/about-us/independence-quality/" target="_top">Independence &amp; Quality</a>
+</div>
+
+</li>
+
+<li class="nav-item">
+
+<a href="/services/" target="_top" class="nav-link active" onclick="return toggleInspaxTrainingDropdown(event, this)">
+Services Offered <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="ndt-services.html">NDT &amp; Quality Assurance Services</a>
+<a href="TPI,BGAS-service.html">TPI, BGAS &amp; NACE Audits</a>
+<a href="Plant-Risk-Ass.html" target="_top">Plant Risk Assessment Services</a>
+<a href="Certified-NDT.html" target="_top">Certified NDT &amp; Technical Training</a>
+</div>
+
+</li>
+
+<li class="nav-item">
+
+<a href="/industries/" target="_top" class="nav-link" onclick="return toggleInspaxTrainingDropdown(event, this)">
+Industries We Serve <span class="chevron">&#9662;</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="/industries/epc-contractors/" target="_top">EPC Contractors</a>
+<a href="/industries/manufacturing-fabrication/" target="_top">Manufacturing &amp; Fabrication</a>
+<a href="/industries/energy-utilities/" target="_top">Energy &amp; Utilities</a>
+</div>
+
+</li>
+
+</ul>
+
+<a href="/contact-us/" target="_top" class="nav-cta">Contact Us</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="wrap">
+<span class="eyebrow">Inspax Inspection & Certification Consultants</span>
+<h1>Certified NDT & Technical Training Programs</h1>
+<p>Industry-recognized certified training programs engineered to upskill your technical workforce, enforce code compliance, and maximize field-level inspection precision. We deliver rigorous, data-driven curricula across non-destructive testing, corrosion control, operational excellence, and next-generation asset intelligence frameworks.</p>
+<div class="hero-line"></div>
+</div>
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+<div class="wrap">
+<h2>Build Technical Competence. Strengthen Inspection Quality.</h2>
+<p>Inspax training programs combine practical industrial knowledge, code-based learning, and modern inspection technologies. Our training tracks are designed to help professionals develop the technical confidence and evidence-based skills required in demanding industrial environments.</p>
+</div>
+</section>
+
+
+<!-- TRAINING PROGRAMS -->
+
+<section class="training-list">
+<div class="wrap">
+
+<!-- 1. NDT Training -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="YOUR_UPLOADED_IMAGE_URL_HERE" alt="Instructor leading an industrial technical training session">
+</div>
+
+<div class="training-content">
+<span class="number">01</span>
+<h3>Industrial Non-Destructive Testing (ASNT NDT Level I & II)</h3>
+<p class="description">Rigorous qualification tracks designed to master subsurface flaw detection and surface discontinuity evaluation under strict international code frameworks.</p>
+
+<ul>
+<li><strong>Volumetric Methods Mastery:</strong> Advanced instruction in Ultrasonic Testing (UT) calibration, signal interpretation, and Radiographic Testing (RT) film interpretation.</li>
+<li><strong>Surface & Subsurface Diagnostics:</strong> Comprehensive hands-on protocols for Magnetic Particle Testing (MT), Liquid Penetrant Testing (PT), and high-precision Visual Testing (VT).</li>
+<li><strong>Code-Compliant Evaluation:</strong> Training focused on execution and defect grading in accordance with ASME Section V, AWS D1.1, and API standards.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 2. Welding Inspection -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1100&q=85" alt="Welder performing precision industrial fabrication">
+</div>
+
+<div class="training-content">
+<span class="number">02</span>
+<h3>Welding Inspection Technologies (AWS & CSWIP Prep)</h3>
+<p class="description">Technical training focused on the physics of metallurgy, welding procedure validation, and structural weld defect identification.</p>
+
+<ul>
+<li><strong>WPS / PQR Analysis:</strong> Training personnel to accurately interpret Welding Procedure Specifications (WPS) and Procedure Qualification Records (PQR).</li>
+<li><strong>Weld Defect Morphology:</strong> Microscopic and visual identification of undercut, lack of fusion, porosity, and hydrogen-induced cracking (HIC).</li>
+<li><strong>Structural Compliance:</strong> Defect boundary evaluation mapped to structural codes to minimize costly on-site weld rejections and rework.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 3. Coatings -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt="Industrial steel and protective coating work">
+</div>
+
+<div class="training-content">
+<span class="number">03</span>
+<h3>Protective Coatings & Corrosion Control (BGAS-CSWIP & NACE Alignment)</h3>
+<p class="description">Specialized technical tracks designed to eliminate premature coating failures and manage aggressive environmental degradation on critical steel and concrete assets.</p>
+
+<ul>
+<li><strong>Substrate Preparation & Ambient Controls:</strong> Quantitative training on anchor profile measurement, surface cleanliness metrics, and psychrometric calculation windows.</li>
+<li><strong>Application Surveillance & DFT Metrics:</strong> Precision mastery of wet and dry film thickness verification, inter-coat adhesion testing, and curing log governance.</li>
+<li><strong>Advanced Holiday Detection:</strong> High-voltage and low-voltage spark testing methodologies to isolate microscopic voids and discontinuities in critical protective linings.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 4. AI and Digital Intelligence -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1100&q=85" alt="Artificial intelligence and digital technology workspace">
+</div>
+
+<div class="training-content">
+<span class="number">04</span>
+<h3>Next-Gen Inspection: AI Use Cases & Digital Asset Intelligence</h3>
+<p class="description">Next-generation frameworks designed to integrate machine learning, computer vision, and structured data verification into traditional QA/QC field workflows.</p>
+
+<ul>
+<li><strong>Computer Vision for Automated Defect Detection:</strong> Training inspectors to deploy and calibrate AI models for real-time automated surface flaw, pitting, and crack classification.</li>
+<li><strong>Sensor Data Pipelines & RAG Integration:</strong> Building automated workflows where field NDT data feeds into centralized contract and code compliance engines for instant verification.</li>
+<li><strong>Digital Audit Trails:</strong> Developing step-by-step electronic logs for field readings to support data governance and commercial traceability.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 5. API Inspection -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1100&q=85" alt="Automated industrial equipment inspection">
+</div>
+
+<div class="training-content">
+<span class="number">05</span>
+<h3>Heavy Industry Equipment Inspection (API 510, 570, 653 Prep)</h3>
+<p class="description">Elite preparatory tracks tailored for in-service inspectors managing critical static assets.</p>
+
+<ul>
+<li><strong>Pressure Vessel Inspection (API 510):</strong> Remaining life calculations, degradation mechanisms, and repair protocol validation.</li>
+<li><strong>Process Piping Inspection (API 570):</strong> Thickness measurement locations (TMLs), corrosion-under-insulation (CUI) tracking, and pressure testing safety.</li>
+<li><strong>Aboveground Storage Tanks (API 653):</strong> Tank bottom settlement evaluation, cathodic protection monitoring, and shell integrity mapping.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 6. QA/QC Governance -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&q=85" alt="Technical project documentation and quality assurance review">
+</div>
+
+<div class="training-content">
+<span class="number">06</span>
+<h3>Technical QA/QC Governance & Project Turnover Auditing</h3>
+<p class="description">Operational training engineered to bridge the gap between physical field testing and flawless commercial project delivery.</p>
+
+<ul>
+<li><strong>Quality Dossier Compilation:</strong> Systematically structuring manufacturing record books (MRBs), material test reports (MTRs), and NDT clearance logs.</li>
+<li><strong>Vendor Shop Surveillance Auditing:</strong> Training third-party inspectors to execute structured factory audits and non-conformance logging.</li>
+<li><strong>Phase-Gate Quality Control:</strong> Implementing mechanical completion and pre-commissioning check-sheets to reduce project handover liabilities.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- 7. Lean Six Sigma -->
+
+<article class="training-card">
+
+<div class="training-image">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1100&q=85" alt="Industrial operations and process improvement team discussion">
+</div>
+
+<div class="training-content">
+<span class="number">07</span>
+<h3>Quantitative Operational Excellence (Lean Six Sigma for Heavy Industry)</h3>
+<p class="description">Statistical process control tailored specifically for manufacturing yards, fabrication shops, and large-scale industrial projects.</p>
+
+<ul>
+<li><strong>DMAIC Methodology Deployment:</strong> Root-cause analysis frameworks applied directly to reducing welding defect rates and structural non-conformances.</li>
+<li><strong>Statistical Process Control (SPC):</strong> Utilizing control charts and capability indices (Cp/Cpk) to stabilize fabrication and casting yard production lines.</li>
+</ul>
+</div>
+
+</article>
+
+</div>
+</section>
+
+
+<!-- ADVANTAGE -->
+
+<section class="advantage">
+<div class="wrap">
+
+<div class="advantage-intro">
+<span class="eyebrow">Why Choose Inspax</span>
+<h2>The Inspax Technical Training Advantage</h2>
+<p>Our training approach prioritizes practical engineering competence, recognized technical frameworks, and measurable performance in the field.</p>
+</div>
+
+<div class="advantage-grid">
+
+<div class="advantage-item">
+<h3>Code-First Methodology</h3>
+<p>Every module is systematically mapped to relevant international engineering standards, including ASME, ASTM, API, AWS, ISO, and AMPP.</p>
+</div>
+
+<div class="advantage-item">
+<h3>Evidence-Based Metrics</h3>
+<p>We focus on measurable competency tracking, helping technical personnel identify risks and support inspection findings with defensible field data.</p>
+</div>
+
+<div class="advantage-item">
+<h3>Practical, Focused Learning</h3>
+<p>Our programs emphasize hardware precision, structural integrity, asset compliance, and real-world industrial inspection challenges.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+<div class="wrap">
+
+<h2>Upgrade Your Technical Workforce with Inspax</h2>
+
+<p>Connect with our team to discuss technical training requirements, program scope, and workforce competency development for your industrial projects.</p>
+
+<a class="cta-button" href="/contact-us/">Enquire About Training</a>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+<div class="wrap">
+
+<h2>Contact Us</h2>
+
+<div class="contact-grid">
+
+<div class="contact-item">
+<h3>Registered Address</h3>
+<p>
+Sadbhawna Colony, Johri Gaon,<br>
+Dehradun - 240003,<br>
+Uttarakhand, India
+</p>
+</div>
+
+<div class="contact-item">
+<h3>Phone</h3>
+<p>
+<a href="tel:+919068298693">+91 9068298693</a><br>
+<a href="tel:+919560065131">+91 9560065131</a>
+</p>
+</div>
+
+<div class="contact-item">
+<h3>Email</h3>
+<p>
+<a href="mailto:info@inspax.in">info@inspax.in</a>
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- NAVBAR JAVASCRIPT -->
+
+<script>
+
+function toggleInspaxTrainingNav() {
+
+    var nav = document.getElementById("inspaxTrainingNavMenu");
+    var btn = document.querySelector("#inspax-training .nav-toggle");
+
+    if (!nav || !btn) return;
+
+    var isOpen = nav.classList.toggle("open");
+
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+}
+
+function toggleInspaxTrainingDropdown(event, linkEl) {
+
+    if (window.innerWidth <= 960) {
+
+        event.preventDefault();
+
+        var parentItem = linkEl.parentElement;
+
+        if (parentItem) {
+            parentItem.classList.toggle("open");
+        }
+
+        return false;
+    }
+
+    return true;
+
+}
+
+</script>
+
 </div>
